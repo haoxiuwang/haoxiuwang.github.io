@@ -1,0 +1,35 @@
+<div id="root">
+    <button >click</button>
+    <div id="show"></div>
+</div>
+
+
+<script>
+
+    function Rand() {
+        show = document.getElementById('show')
+        function get() {
+            arr = new Array(1000);
+            var count = 0;
+            while(count<1000){
+                arr[count++] = Math.round(Math.random()*1000)
+            }        
+            return arr;
+        }
+
+        var arr1 = get()
+        var html = arr1.map((item)=>{
+            return `
+                <li>${item}</li>
+            `
+        }).join()       
+       
+        show.innerHTML=html
+     
+
+    }
+
+
+
+    
+</script>
